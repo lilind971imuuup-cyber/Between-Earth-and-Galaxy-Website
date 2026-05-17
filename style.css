@@ -181,6 +181,10 @@ list-group shadow-sm. list-group-item active border-0 bg-success{
 }
 
 /*artikel*/
+.artikel .card-title {
+    color: #000000 !important; /* #000000 adalah kode warna hitam */
+}
+
 .artikel .btn-success {
     background-color:#6f2da8 ;
     border-color: #6f2da8(--primary-color);
@@ -208,11 +212,65 @@ list-group shadow-sm. list-group-item active border-0 bg-success{
 }
 
 
+/*komunitas*/
+.komunitas .card-img-top {
+    height:  290px;
+    width: 510 px;/* Mengunci tinggi gambar agar seragam */
+    object-fit: cover;      /* Memotong gambar secara proporsional jika beda resolusi */
+    object-position: center;
+}
+
+/* Efek awal kartu */
+.komunitas .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px  rgba(111, 45, 168, 0.15);
+}
+
+/* Efek ketika kartu ditekan/di-hover (Naik + Shadow) */
+.komunitas .card:hover {
+    transform: translateY(-8px); /* Membuat kartu terangkat ke atas */
+    box-shadow: 0 10px 20px rgba(111, 45, 168, 0.15);) !important; /* Memberikan shadow tipis yang halus */
+    background-color: var(--card-hover-bg);
+}
+
+/*komunitas*/
+.komunitas .card-title {
+    color: #000000 !important; /* #000000 adalah kode warna hitam */
+}
+
+.komunitas .btn-success {
+    background-color:#6f2da8 ;
+    border-color: #6f2da8(--primary-color);
+    color: #fff(--text-button-color);
+    transition: all 0.2s ease;
+}
+
+.komunitas .btn-success:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: var(--text-button-color);
+}
+
+/* Tombol Detail (Outline) */
+.komunitas .btn-outline-secondary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transition: all 0.2s ease;
+}
+
+.komunitas .btn-outline-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-button-color);
+    border-color: var(--primary-color);
+}
+
 
 
 
 
 /* Gallery Layout */
+
+
 .gallery-card {
     background: #fff;
     padding: 10px;
@@ -248,13 +306,6 @@ list-group shadow-sm. list-group-item active border-0 bg-success{
     margin-bottom: 10px;
 }
 
-.view-link {
-    font-size: 0.8rem;
-    text-decoration: none;
-    color: #6f2da8;
-    font-weight: bold;
-    text-transform: uppercase;
-}
 
 /* Efek Interaksi (CSS yang 'Ditekan') */
 .gallery-card:hover {
