@@ -1,0 +1,314 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar Customization */
+.custom-nav {
+    background-color:  #6f2da8 !important;
+    padding: 15px 0;
+}
+
+.navbar-brand.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #de73ff !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #de73ff !important;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('banner.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.btn-custom {
+    background-color: #6f2da8;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.btn-custom:hover {
+    background-color: #fff;
+    color: #6f2da8;
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+    background-color: #f3e5f5; /* Lavender muda */
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #4a148c;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Styling Gambar Hobi */
+.hobby-img {
+    height: 200px;
+    object-fit: cover; /* Agar gambar tidak gepeng */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hobby-card {
+    border-radius: 20px !important;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: scale(1.03);
+}
+
+.btn-hobby-action {
+    background-color:#6f2da8; 
+    color: #ffffff; 
+    
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-hobby-action:hover {
+    background-color: #de73ff; 
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(111, 45, 168, 0.15);;
+}
+
+/* Testimony Styles */
+.quote-icon {
+    font-size: 2.5rem;
+    color: #6f2da8;
+    margin-bottom: 10px;
+}
+
+.stars {
+    color: #ffc107;
+}
+
+.testimony-card {
+    height: 100%;
+}
+
+/* Contact Form */
+.contact{
+  background-color: #f3e5f5;
+}
+
+.contact-form {
+    max-width: 500px;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(111, 45, 168, 0.2);
+    border-color: #6f2da8;
+}
+
+list-group shadow-sm. list-group-item active border-0 bg-success{
+  background-color: #6f2da8;
+}
+
+/* ==========================================
+   artikel
+   ========================================== */
+/* Mengubah warna kategori yang sedang aktif/nyala */
+.list-group-item.active.bg-success {
+    background-color: #6f2da8 !important;
+    color: #fff !important;
+}
+
+/* ==========================================
+   4. artikelcard
+   ========================================== */
+/* Memastikan semua gambar produk berukuran sama & pas (tidak gepeng) */
+.artikel .card-img-top {
+    height: 220px;          /* Mengunci tinggi gambar agar seragam */
+    object-fit: cover;      /* Memotong gambar secara proporsional jika beda resolusi */
+    object-position: center;
+}
+
+/* Efek awal kartu */
+.artikel .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px  rgba(111, 45, 168, 0.15);
+}
+
+/* Efek ketika kartu ditekan/di-hover (Naik + Shadow) */
+.artikel .card:hover {
+    transform: translateY(-8px); /* Membuat kartu terangkat ke atas */
+    box-shadow: 0 10px 20px rgba(111, 45, 168, 0.15);) !important; /* Memberikan shadow tipis yang halus */
+    background-color: var(--card-hover-bg);
+}
+
+/*artikel*/
+.artikel .btn-success {
+    background-color:#6f2da8 ;
+    border-color: #6f2da8(--primary-color);
+    color: #fff(--text-button-color);
+    transition: all 0.2s ease;
+}
+
+.artikel .btn-success:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: var(--text-button-color);
+}
+
+/* Tombol Detail (Outline) */
+.artikel .btn-outline-secondary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transition: all 0.2s ease;
+}
+
+.artikel .btn-outline-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-button-color);
+    border-color: var(--primary-color);
+}
+
+
+
+
+
+
+/* Gallery Layout */
+.gallery-card {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.img-box {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.img-box img {
+    width: 100%;
+    aspect-ratio: 4/3; /* Atur rasio gambar agar seragam */
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+/* Info Styling */
+.gallery-info h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4a148c;
+    margin-bottom: 5px;
+}
+
+.gallery-info p {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.view-link {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #6f2da8;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Efek Interaksi (CSS yang 'Ditekan') */
+.gallery-card:hover {
+    transform: translateY(-10px); /* Efek terangkat */
+    box-shadow: 0 10px 25px rgba(111, 45, 168, 0.15);
+    border-color: #de73ff;
+}
+
+.gallery-card:active {
+    transform: translateY(-2px); /* Efek 'ditekan' saat diklik */
+    box-shadow: 0 5px 10px rgba(111, 45, 168, 0.1);
+}
+
+.gallery-card:hover .img-box img {
+    transform: scale(1.05); /* Gambar sedikit nge-zoom */
+}
+
+/* Footer */
+/* Footer Customization */
+.footer {
+    /* Mengikuti warna teks logo navbar kamu */
+    background-color: #6f2da8 !important; 
+    padding: 40px 0;
+    color: #de73ff; /* Teks dibuat ungu tua agar kontras */
+}
+
+.footer h4 {
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #de73ff; /* Pastikan judul juga ungu tua */
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.9; /* Sedikit lebih tebal agar jelas di bg terang */
+}
+
+.footer hr {
+    /* Garis pemisah disesuaikan warnanya */
+    border-top: 1px solid rgba(74, 20, 140, 0.2); 
+}
+
+.footer .copyright {
+    font-weight: 500;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
