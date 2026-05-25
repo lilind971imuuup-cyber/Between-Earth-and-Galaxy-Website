@@ -12,7 +12,7 @@ html {
 
 /* Navbar Customization */
 .custom-nav {
-    background-color:  #6f2da8 !important;
+    background-color:  #7A4988 !important;
     padding: 15px 0;
 }
 
@@ -148,6 +148,14 @@ list-group shadow-sm. list-group-item active border-0 bg-success{
   background-color: #6f2da8;
 }
 
+
+#contact h2,
+#contact .subtitle {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 /* ==========================================
    artikel
    ========================================== */
@@ -269,6 +277,36 @@ list-group shadow-sm. list-group-item active border-0 bg-success{
 
 
 /* Gallery Layout */
+/* ==========================================================================
+   MENYAMAKAN TINGGI BOX GALERI (CARDS)
+   ========================================================================== */
+
+/* Pastikan kolom pembungkusnya memiliki tinggi yang sama rata */
+.gallery .row, 
+#gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Memaksa elemen box/card di dalamnya mengisi tinggi penuh secara vertikal */
+.gallery .card,
+#gallery .card,
+.gallery .col-md-6 > div, /* Jika kamu pakai div biasa, bukan class .card */
+#gallery .col-md-6 > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Membuat teks deskripsi otomatis mengambil sisa ruang yang ada 
+   sehingga tombol atau bagian bawah card sejajar rata */
+.gallery .card-body,
+#gallery .card-body,
+.gallery p,
+#gallery p {
+    flex-grow: 1;
+}
+
 
 
 .gallery-card {
@@ -295,7 +333,8 @@ list-group shadow-sm. list-group-item active border-0 bg-success{
 .gallery-info h5 {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #4a148c;
+    color: 
+    #7A4988;
     margin-bottom: 5px;
 }
 
@@ -325,31 +364,148 @@ list-group shadow-sm. list-group-item active border-0 bg-success{
 
 /* Footer */
 /* Footer Customization */
-.footer {
-    /* Mengikuti warna teks logo navbar kamu */
-    background-color: #6f2da8 !important; 
-    padding: 40px 0;
-    color: #de73ff; /* Teks dibuat ungu tua agar kontras */
+:root {
+    --purple-main: #7A4988;    /* Warna ungu utama */
+    --purple-hover: #5A3266;   /* Warna ungu gelap untuk hover */
 }
 
-.footer h4 {
-    letter-spacing: 2px;
-    font-weight: bold;
-    color: #de73ff; /* Pastikan judul juga ungu tua */
+/* ==========================================================================
+   PERBAIKAN SECTION ATAS / NEWSLETTER
+   ========================================================================== */
+
+/* Menargetkan section newsletter menggunakan class bawaan tanpa merusak teks */
+.container-fluid.py-5 {
+    background-color: var(--purple-main) !important;
 }
 
-.footer p {
+/* Memastikan teks di bagian newsletter tetap putih terang */
+.container-fluid.py-5 .text-light {
+    color: #ffffff !important;
+}
+
+/* Mengubah tombol Subscribe menjadi putih dengan teks ungu */
+.container-fluid.py-5 .btn-success {
+    background-color: #ffffff !important;
+    color: #7A4988 !important;
+    border: none !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.container-fluid.py-5 .btn-success:hover {
+    background-color: #7A4988;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Efek hover icon media sosial */
+.container-fluid.py-5 .d-flex a.text-light {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    display: inline-block;
+}
+
+.container-fluid.py-5 .d-flex a.text-light:hover {
+    transform: translateY(-4px);
+    opacity: 0.85;
+}
+
+/* ==========================================================================
+   PERBAIKAN UTAMA FOOTER (MENGEMBALIKAN TEKS YANG HILANG)
+   ========================================================================== */
+
+/* Memaksa background footer tetap gelap */
+footer.bg-dark {
+    background-color: #212529 !important;
+}
+
+/* Mengembalikan semua teks bawaan footer agar berwarna putih terang */
+footer .text-light, 
+footer h5, 
+footer h6 {
+    color: #f8f9fa !important;
+}
+
+/* Mengembalikan teks deskripsi dan link agar berwarna abu-abu terang */
+footer .text-muted, 
+footer .list-unstyled a {
+    color: #a0a0a0 !important;
+}
+
+/* Mengubah warna Judul Brand & Icon menjadi Ungu */
+footer .text-success,
+footer .bi-geo-alt-fill,
+footer .bi-telephone-fill,
+footer .bi-envelope-fill {
+    color: var(--purple-main) !important;
+}
+
+/* Efek hover link navigasi di dalam footer */
+footer .list-unstyled a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+
+/* Font khusus untuk Judul & Subjudul */
+.article-title, 
+.plant-section h3 {
+    font-family: 'Playfair Display', serif;
+    color: #333333;
+}
+
+.article-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+/* Jarak breadcrumb */
+.breadcrumb-container {
     font-size: 0.9rem;
-    opacity: 0.9; /* Sedikit lebih tebal agar jelas di bg terang */
+}
+.breadcrumb-container a {
+    color: #7A4988; /* Warna ungu link */
+}
+.breadcrumb-container a:hover {
+    text-decoration: underline;
 }
 
-.footer hr {
-    /* Garis pemisah disesuaikan warnanya */
-    border-top: 1px solid rgba(74, 20, 140, 0.2); 
+/* Metadata Artikel */
+.article-meta i {
+    color: #7A4988; /* Warna ungu icon */
 }
 
-.footer .copyright {
-    font-weight: 500;
+/* KUNCI UTAMA: Otomatis memotong semua gambar artikel agar seragam & tidak gepeng */
+.article-img {
+    width: 100%;        
+    height: 380px;      /* Mengunci tinggi gambar di semua artikel */
+    object-fit: cover;  /* Memotong gambar secara otomatis agar proporsional */
+    object-position: center; 
+    border-radius: 12px;     
+}
+
+/* Styling Subjudul Tanaman / Planet */
+.plant-section h3 {
+    font-size: 1.4rem;
+    color: #7A4988; /* Warna ungu kustom */
+    margin-bottom: 8px;
+}
+
+.plant-section p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #555555;
+    text-align: justify; 
+}
+
+/* Responsif Layar HP */
+@media (max-width: 768px) {
+    .article-img {
+        height: 260px;  
+        margin-bottom: 20px;
+    }
+    .article-title {
+        font-size: 2rem;
+        margin-top: 15px;
+    }
 }
 
 /* Responsiveness */
@@ -358,8 +514,4 @@ list-group shadow-sm. list-group-item active border-0 bg-success{
         font-size: 2.5rem;
     }
 }
-
-
-
-
 
